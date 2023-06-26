@@ -31,12 +31,14 @@ def readCsv():
 
 
 def plotResults(timeBefores, timeDiffs, updateStartTime, updateFinishTime):
+    plt.rcParams['font.size'] = 17
+
     fig, ax = plt.subplots()
 
     # If we want to better use date time as the X values, we should use this mdates.date2num to convert it.
     formattedTimeBefores = mdates.date2num(timeBefores)
 
-    ax.scatter(formattedTimeBefores, timeDiffs, marker='*', s=5, zorder=5)
+    ax.scatter(formattedTimeBefores, timeDiffs, marker='*', s=7, zorder=5)
     # ax.plot(timeBefores, timeDiffs)
 
     # configure the format of the date time on the x labels
@@ -84,7 +86,7 @@ def plotResults(timeBefores, timeDiffs, updateStartTime, updateFinishTime):
     ax.axhline(y=common.errMark,
                color='red',
                linestyle='--',
-               linewidth=1,
+               linewidth=2,
                zorder=1)
     ax.text(x=formattedTimeBefores[0],
             y=common.errMark,

@@ -11,7 +11,7 @@ If I want to check the service url `http://192.168.100.31:30001` with the expect
 If I want to triger the rolling update of a deployment named `deploy1` in namespace `ns1`, migrating its pod to a node named `node1`, I should run `python3 -u kubectl_rolling_update.py deploy1 ns1 node1`. This program will record the start time and end time of the rolling update, and save them in to `update.csv`.
 
 ## An example to use `plotting.py`.
-After generating the files `check.csv` and `update.csv` using `check.py` and `kubectl_rolling_update.py`, I can run `python -u plotting.py` to plot the figure to show the downtime of this service during a Kubernetes rolling update.
+After generating the files `check.csv` and `update.csv` using `check.py` and `kubectl_rolling_update.py`, I can run `python3 -u plotting.py` to plot the figure to show the downtime of this service during a Kubernetes rolling update.
 
 
 ## The steps of my experiment.

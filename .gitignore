@@ -1,3 +1,6 @@
+# Data files in the root path
+*.csv
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
